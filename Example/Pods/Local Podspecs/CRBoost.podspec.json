@@ -3,20 +3,26 @@
   "version": "0.1.0",
   "summary": "A short description of CRBoost.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Eric Wu/CRBoost",
+  "homepage": "https://github.com/csc-EricWu/CRBoost",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Eric Wu": "wuxiaofeng@app.fulu.com"
+    "Eric Wu": "sleman@foxmail.com"
   },
   "source": {
-    "git": "https://github.com/Eric Wu/CRBoost.git",
+    "git": "https://github.com/csc-EricWu/CRBoost",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "CRBoost/Classes/**/*"
+  "source_files": "CRBoost/**/*",
+  "public_header_files": "CRBoost/**/*.{h}",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
+  "module_name": "CRBoost"
 }

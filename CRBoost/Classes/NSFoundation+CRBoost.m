@@ -9,6 +9,8 @@
 #import "NSFoundation+CRBoost.h"
 #import <CommonCrypto/CommonDigest.h>
 @import ObjectiveC.runtime;
+#import "CRMath.h"
+#import "UIColor+CRBoost.h"
 
 #pragma mark -
 #pragma mark NSObject

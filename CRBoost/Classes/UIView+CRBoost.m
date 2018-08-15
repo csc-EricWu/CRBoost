@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 #import "CRMacros.h"
+#import "CRMath.h"
 
 @interface UIView ()
 @property (nonatomic, strong) UIView *topBanner;

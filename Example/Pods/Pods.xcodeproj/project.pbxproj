@@ -7,16 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BD9380D45736AAE1FB79064DAF70D17 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F1BFAE2ABF9777F5C87C74EF05E452 /* ReplaceMe.m */; };
+		0EBB4F3B688FA5E8B8138FD8AEB4B048 /* UIView+CRBoost.h in Headers */ = {isa = PBXBuildFile; fileRef = 23D03AF253B06E0992DD01A8A7917ACE /* UIView+CRBoost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2597C24D9EFD6686A366DE7924625C4F /* CRBoost-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C628845B453BBECAEE1652B890F11537 /* CRBoost-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		285BB2E7A399DB30B3AC04E0F24998FF /* CRKeyboardUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5E3D720657A8C8FA17B2264D22213 /* CRKeyboardUtility.m */; };
+		2C4A9B93EBEF336C4CFA9A0DE02BA6AB /* CRKeyboardUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A848A419C3F5ABE9832BB012636F2A1 /* CRKeyboardUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CD0EA62BA486FEF14DF0DB270BF7E75 /* UIKit+CRBoost.h in Headers */ = {isa = PBXBuildFile; fileRef = 7127A85F7281C7C0EAD5DA1C2906F242 /* UIKit+CRBoost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5B4E9B3CDA6AB9ACC066065AD6C358 /* Pods-CRBoost_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF12CE5A7FFB6CE99BCAFBFBE00233D /* Pods-CRBoost_Example-dummy.m */; };
-		475DAE3D5A2727B4DB25E8ED87A686C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		51EE71455ED57A3C75DABE8CDC195248 /* CRBoost-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F730FA4BBA0639EB8682791407BE554 /* CRBoost-dummy.m */; };
-		756448BE6EDB9CF124F5A5C44D0065FC /* CRBoost-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 782FC34E5E8FC45D8B87CEE71196C441 /* CRBoost-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE4029D6BCDD84832AE642800A0687B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CE58AD5FB1C132DA15482042339EE9CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3BA873321C1461CEDC067DA0C2A3DC5A /* NSFoundation+CRBoost.h in Headers */ = {isa = PBXBuildFile; fileRef = 831433CB0BFDECABB76948FC0734D274 /* NSFoundation+CRBoost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		475DAE3D5A2727B4DB25E8ED87A686C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4C05CEB6C054203AE259072C2CA81361 /* CRBoost.h in Headers */ = {isa = PBXBuildFile; fileRef = 679C958D0013ADFDF1573F7A7A558698 /* CRBoost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58893CE716BFBF68224B515166A15563 /* CRMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B49080458805688A48A69F349C31CE78 /* CRMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BA212059C28793837D4B8DEF90550D8 /* CRBoost-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5F08C62FFBD1B7CAF33CAC891EB8BE /* CRBoost-dummy.m */; };
+		6BC441290545FE6BD1AA7EFD6A147413 /* UIFont+CRBoost.h in Headers */ = {isa = PBXBuildFile; fileRef = A671D3246108A1F89890941AA139CA55 /* UIFont+CRBoost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		705060F0F5961989D6742312D239EB72 /* UIColor+CRBoost.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3947BF12400A64FDC29DF37DBAEF21 /* UIColor+CRBoost.m */; };
+		A9F17B7915471677469D2A2FE970DC29 /* UIKit+CRBoost.m in Sources */ = {isa = PBXBuildFile; fileRef = 02280710626AE2459A59ADC2CB95163B /* UIKit+CRBoost.m */; };
+		AE4029D6BCDD84832AE642800A0687B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		AFBFC42F5F6E1246A4C9AFF73DE4532E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		B0B6F73057F6E8F1734676ED7FCFB63A /* UIFont+CRBoost.m in Sources */ = {isa = PBXBuildFile; fileRef = BD546DEB4FB1BC63E04B70E927A511C6 /* UIFont+CRBoost.m */; };
+		C7CA0D8351DF1BE3EA0EC182F7F7FE17 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C36D1FE0895D1737004414FF384F78 /* Utility.m */; };
+		CC20BE1DAEAF10AF3D659813ADF7000B /* UIColor+CRBoost.h in Headers */ = {isa = PBXBuildFile; fileRef = C48DD4CC3A96D74E3211BF93FB718D13 /* UIColor+CRBoost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D160BCC03AE6F480A9574CE245D32AA2 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9209A3B7139AF016CA6B4E07249757 /* Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D57E55A96F395DB2F3416BE4C2056CDF /* UIView+CRBoost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3010AEFF5F8BC88C52E79A6E7150567D /* UIView+CRBoost.m */; };
 		E3EC38846FE1A09D9C28C834194013D5 /* Pods-CRBoost_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D72CF7145CE144ECFBA5B75F4D501589 /* Pods-CRBoost_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F571C451D021D9D264A93E181DEB6D75 /* Pods-CRBoost_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E83CF5108CB2322FE931E9E826223E /* Pods-CRBoost_Tests-dummy.m */; };
+		F5AE1525CD6725640DEB60C384D3EE7F /* CRMath.h in Headers */ = {isa = PBXBuildFile; fileRef = CA822C2B2716DB524D72DF7D37E4F1CD /* CRMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7261EFD88A396BB696A5C68757EC18F /* Pods-CRBoost_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B168FE546F7D62902000A541AC6A6FD /* Pods-CRBoost_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBFBE9AA0D9F0B19A040F09B1A94D1AE /* NSFoundation+CRBoost.m in Sources */ = {isa = PBXBuildFile; fileRef = F837168E4D5097F3165FB07372ECE3AE /* NSFoundation+CRBoost.m */; };
+		FD0AA1E67A14819CCA507368D377FCFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +41,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4B6A7B147E4EDBE57778EF191D557A90;
+			remoteGlobalIDString = F668E6FA62C29E01E8B961D85E3FCDBB;
 			remoteInfo = CRBoost;
 		};
 		3C1E73ED2206430C913BA1BF6EF2D4B4 /* PBXContainerItemProxy */ = {
@@ -37,27 +54,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02280710626AE2459A59ADC2CB95163B /* UIKit+CRBoost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIKit+CRBoost.m"; path = "CRBoost/Classes/UIKit+CRBoost.m"; sourceTree = "<group>"; };
 		0777D863C80761AD5EBF4E226A933763 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AAA30D3AA60010E830174D758587684 /* Pods-CRBoost_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoost_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0DF549F40D03BCCABDE05CCCC820A859 /* Pods-CRBoost_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoost_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		10EA6E93155CB1A6AD294B9A8580DF8C /* CRBoost.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CRBoost.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		155033076EBFF6FD903D720851B5D1A9 /* CRBoost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CRBoost.framework; path = CRBoost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D03AF253B06E0992DD01A8A7917ACE /* UIView+CRBoost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CRBoost.h"; path = "CRBoost/Classes/UIView+CRBoost.h"; sourceTree = "<group>"; };
 		26138054F93A8EF436C3B88A6A15C53D /* Pods-CRBoost_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoost_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		35FB492C24719DA9FF5A58DFABC98332 /* CRBoost.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRBoost.xcconfig; sourceTree = "<group>"; };
+		2DBA9993E12B2457EE95321E2B8E9834 /* CRBoost.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRBoost.xcconfig; sourceTree = "<group>"; };
+		3010AEFF5F8BC88C52E79A6E7150567D /* UIView+CRBoost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CRBoost.m"; path = "CRBoost/Classes/UIView+CRBoost.m"; sourceTree = "<group>"; };
+		31A5E3D720657A8C8FA17B2264D22213 /* CRKeyboardUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRKeyboardUtility.m; path = CRBoost/Classes/CRKeyboardUtility.m; sourceTree = "<group>"; };
 		3A11B3C2126FD7F4E653BC9D696178E7 /* Pods_CRBoost_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoost_Tests.framework; path = "Pods-CRBoost_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C94E32A2A9682C3845F7BFAC51FBD96 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3F2793F53888640A7E9CEABE98413267 /* Pods-CRBoost_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoost_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		41D93B0613BC5BE61299790A70C6B89B /* Pods_CRBoost_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoost_Example.framework; path = "Pods-CRBoost_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		445C7D3E9C8206413E541622A42750E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		45E0BCCEE90F39D7042ED62A4EBBC45F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		484A65900D3F2515B4F43BBB0BB49F03 /* Pods-CRBoost_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoost_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		49139E1EEDA6C6C4159D132841A96AB4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA4FB98B6D7B31175C368F559C36ABF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		5BF12CE5A7FFB6CE99BCAFBFBE00233D /* Pods-CRBoost_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoost_Example-dummy.m"; sourceTree = "<group>"; };
 		5C951D28201D66B72D4B8562F604C079 /* Pods-CRBoost_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoost_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6E415ACFE1AB47BFF5B88D38F4C4390F /* CRBoost.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CRBoost.modulemap; sourceTree = "<group>"; };
-		6F730FA4BBA0639EB8682791407BE554 /* CRBoost-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRBoost-dummy.m"; sourceTree = "<group>"; };
-		782FC34E5E8FC45D8B87CEE71196C441 /* CRBoost-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoost-umbrella.h"; sourceTree = "<group>"; };
+		679C958D0013ADFDF1573F7A7A558698 /* CRBoost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRBoost.h; path = CRBoost/Classes/CRBoost.h; sourceTree = "<group>"; };
+		7127A85F7281C7C0EAD5DA1C2906F242 /* UIKit+CRBoost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+CRBoost.h"; path = "CRBoost/Classes/UIKit+CRBoost.h"; sourceTree = "<group>"; };
+		72B6E0B20552C3FB2D993081E1F0F2FA /* CRBoost.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CRBoost.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7A848A419C3F5ABE9832BB012636F2A1 /* CRKeyboardUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRKeyboardUtility.h; path = CRBoost/Classes/CRKeyboardUtility.h; sourceTree = "<group>"; };
 		7D6DB2AC9D076099CBBDB87424FEB445 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831433CB0BFDECABB76948FC0734D274 /* NSFoundation+CRBoost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFoundation+CRBoost.h"; path = "CRBoost/Classes/NSFoundation+CRBoost.h"; sourceTree = "<group>"; };
 		87B03463C82752ED6682F382EE6B51CC /* Pods-CRBoost_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoost_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B2AD4EDF738282C472DC83EBB66598A /* Pods-CRBoost_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoost_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -65,13 +85,27 @@
 		9ACC2D8F6DE41C3BCDE2A6F3B101CAE6 /* Pods-CRBoost_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoost_Tests.modulemap"; sourceTree = "<group>"; };
 		9B168FE546F7D62902000A541AC6A6FD /* Pods-CRBoost_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoost_Example-umbrella.h"; sourceTree = "<group>"; };
 		A6352D34404D97AFCBD4458F5DE3BB17 /* Pods-CRBoost_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoost_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A671D3246108A1F89890941AA139CA55 /* UIFont+CRBoost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+CRBoost.h"; path = "CRBoost/Classes/UIFont+CRBoost.h"; sourceTree = "<group>"; };
 		B44030C11BE79D736A8B9865AF281472 /* Pods-CRBoost_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoost_Example-resources.sh"; sourceTree = "<group>"; };
+		B4678D72AA73AFBA93EDA0BC0AF932E9 /* CRBoost.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CRBoost.modulemap; sourceTree = "<group>"; };
+		B49080458805688A48A69F349C31CE78 /* CRMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRMacros.h; path = CRBoost/Classes/CRMacros.h; sourceTree = "<group>"; };
+		B515D10066D7B0F09CD6B75B0E204623 /* CRBoost-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoost-prefix.pch"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BD546DEB4FB1BC63E04B70E927A511C6 /* UIFont+CRBoost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+CRBoost.m"; path = "CRBoost/Classes/UIFont+CRBoost.m"; sourceTree = "<group>"; };
+		C2BBE15DD0703374C9B8C5ACAF0F5553 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C48DD4CC3A96D74E3211BF93FB718D13 /* UIColor+CRBoost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+CRBoost.h"; path = "CRBoost/Classes/UIColor+CRBoost.h"; sourceTree = "<group>"; };
 		C4CAB1F4384DD952EF38046C142C5117 /* Pods-CRBoost_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoost_Tests-resources.sh"; sourceTree = "<group>"; };
+		C628845B453BBECAEE1652B890F11537 /* CRBoost-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoost-umbrella.h"; sourceTree = "<group>"; };
+		CA822C2B2716DB524D72DF7D37E4F1CD /* CRMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRMath.h; path = CRBoost/Classes/CRMath.h; sourceTree = "<group>"; };
 		D72CF7145CE144ECFBA5B75F4D501589 /* Pods-CRBoost_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoost_Tests-umbrella.h"; sourceTree = "<group>"; };
-		DE01FA9D64FDE095172655EFE1E770EC /* CRBoost-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoost-prefix.pch"; sourceTree = "<group>"; };
+		D7C36D1FE0895D1737004414FF384F78 /* Utility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = CRBoost/Classes/Utility.m; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E6E83CF5108CB2322FE931E9E826223E /* Pods-CRBoost_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoost_Tests-dummy.m"; sourceTree = "<group>"; };
-		F2F1BFAE2ABF9777F5C87C74EF05E452 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = CRBoost/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		EB5F08C62FFBD1B7CAF33CAC891EB8BE /* CRBoost-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRBoost-dummy.m"; sourceTree = "<group>"; };
 		F50DC5674278567F353DE36BEFC8EE48 /* Pods-CRBoost_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoost_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F837168E4D5097F3165FB07372ECE3AE /* NSFoundation+CRBoost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFoundation+CRBoost.m"; path = "CRBoost/Classes/NSFoundation+CRBoost.m"; sourceTree = "<group>"; };
+		FB9209A3B7139AF016CA6B4E07249757 /* Utility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = CRBoost/Classes/Utility.h; sourceTree = "<group>"; };
+		FF3947BF12400A64FDC29DF37DBAEF21 /* UIColor+CRBoost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CRBoost.m"; path = "CRBoost/Classes/UIColor+CRBoost.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +117,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D30BD78CE3C04774F42D2A9228255B7 /* Frameworks */ = {
+		D195B299A78594F48A491D62676C2348 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE58AD5FB1C132DA15482042339EE9CB /* Foundation.framework in Frameworks */,
+				FD0AA1E67A14819CCA507368D377FCFC /* Foundation.framework in Frameworks */,
+				AFBFC42F5F6E1246A4C9AFF73DE4532E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +137,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ED5416E8A47D1F48A0EA56AD91E3F5C /* CRBoost */ = {
+			isa = PBXGroup;
+			children = (
+				679C958D0013ADFDF1573F7A7A558698 /* CRBoost.h */,
+				7A848A419C3F5ABE9832BB012636F2A1 /* CRKeyboardUtility.h */,
+				31A5E3D720657A8C8FA17B2264D22213 /* CRKeyboardUtility.m */,
+				B49080458805688A48A69F349C31CE78 /* CRMacros.h */,
+				CA822C2B2716DB524D72DF7D37E4F1CD /* CRMath.h */,
+				831433CB0BFDECABB76948FC0734D274 /* NSFoundation+CRBoost.h */,
+				F837168E4D5097F3165FB07372ECE3AE /* NSFoundation+CRBoost.m */,
+				C48DD4CC3A96D74E3211BF93FB718D13 /* UIColor+CRBoost.h */,
+				FF3947BF12400A64FDC29DF37DBAEF21 /* UIColor+CRBoost.m */,
+				A671D3246108A1F89890941AA139CA55 /* UIFont+CRBoost.h */,
+				BD546DEB4FB1BC63E04B70E927A511C6 /* UIFont+CRBoost.m */,
+				7127A85F7281C7C0EAD5DA1C2906F242 /* UIKit+CRBoost.h */,
+				02280710626AE2459A59ADC2CB95163B /* UIKit+CRBoost.m */,
+				23D03AF253B06E0992DD01A8A7917ACE /* UIView+CRBoost.h */,
+				3010AEFF5F8BC88C52E79A6E7150567D /* UIView+CRBoost.m */,
+				FB9209A3B7139AF016CA6B4E07249757 /* Utility.h */,
+				D7C36D1FE0895D1737004414FF384F78 /* Utility.m */,
+				B84808414BFB6DA671FCC3CD20CDF5E3 /* Pod */,
+				934D106B90F7278FB09AF9BB38279000 /* Support Files */,
+			);
+			name = CRBoost;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		12D7DF4E504E838487DFD8E36FE51B70 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,74 +191,64 @@
 			path = "Target Support Files/Pods-CRBoost_Tests";
 			sourceTree = "<group>";
 		};
-		4851AEAFDB91AD17F10CE55761E2FB62 /* Pod */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10EA6E93155CB1A6AD294B9A8580DF8C /* CRBoost.podspec */,
-				45E0BCCEE90F39D7042ED62A4EBBC45F /* LICENSE */,
-				445C7D3E9C8206413E541622A42750E3 /* README.md */,
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
 			);
-			name = Pod;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6FEC440A785C3D87E167B8B2BF03AC77 /* Development Pods */ = {
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C1BB79D6B52B01FE2790193A7600BCE8 /* CRBoost */,
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
 			);
-			name = "Development Pods";
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				6FEC440A785C3D87E167B8B2BF03AC77 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				87DCACCD663429D501D1C48B4DE8C4F4 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				F96E886353D8E6B15045B587FCDCF46B /* Products */,
 				12D7DF4E504E838487DFD8E36FE51B70 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		87DCACCD663429D501D1C48B4DE8C4F4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				0ED5416E8A47D1F48A0EA56AD91E3F5C /* CRBoost */,
 			);
-			name = Frameworks;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		C1BB79D6B52B01FE2790193A7600BCE8 /* CRBoost */ = {
+		934D106B90F7278FB09AF9BB38279000 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F2F1BFAE2ABF9777F5C87C74EF05E452 /* ReplaceMe.m */,
-				4851AEAFDB91AD17F10CE55761E2FB62 /* Pod */,
-				F13EC4D722281C1C2AEC77DF4E3388E3 /* Support Files */,
-			);
-			name = CRBoost;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F13EC4D722281C1C2AEC77DF4E3388E3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6E415ACFE1AB47BFF5B88D38F4C4390F /* CRBoost.modulemap */,
-				35FB492C24719DA9FF5A58DFABC98332 /* CRBoost.xcconfig */,
-				6F730FA4BBA0639EB8682791407BE554 /* CRBoost-dummy.m */,
-				DE01FA9D64FDE095172655EFE1E770EC /* CRBoost-prefix.pch */,
-				782FC34E5E8FC45D8B87CEE71196C441 /* CRBoost-umbrella.h */,
-				49139E1EEDA6C6C4159D132841A96AB4 /* Info.plist */,
+				B4678D72AA73AFBA93EDA0BC0AF932E9 /* CRBoost.modulemap */,
+				2DBA9993E12B2457EE95321E2B8E9834 /* CRBoost.xcconfig */,
+				EB5F08C62FFBD1B7CAF33CAC891EB8BE /* CRBoost-dummy.m */,
+				B515D10066D7B0F09CD6B75B0E204623 /* CRBoost-prefix.pch */,
+				C628845B453BBECAEE1652B890F11537 /* CRBoost-umbrella.h */,
+				C2BBE15DD0703374C9B8C5ACAF0F5553 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/CRBoost";
+			sourceTree = "<group>";
+		};
+		B84808414BFB6DA671FCC3CD20CDF5E3 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				72B6E0B20552C3FB2D993081E1F0F2FA /* CRBoost.podspec */,
+				4EA4FB98B6D7B31175C368F559C36ABF /* LICENSE */,
+				3C94E32A2A9682C3845F7BFAC51FBD96 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		F34D7CB88DDB0472CC2EEE2A74F2726A /* Pods-CRBoost_Example */ = {
@@ -230,11 +282,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B53CB74C6ED16A7CD05C365B5E99ABA /* Headers */ = {
+		5D3D992F80ED5499221C50AC20D258D0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756448BE6EDB9CF124F5A5C44D0065FC /* CRBoost-umbrella.h in Headers */,
+				2597C24D9EFD6686A366DE7924625C4F /* CRBoost-umbrella.h in Headers */,
+				4C05CEB6C054203AE259072C2CA81361 /* CRBoost.h in Headers */,
+				2C4A9B93EBEF336C4CFA9A0DE02BA6AB /* CRKeyboardUtility.h in Headers */,
+				58893CE716BFBF68224B515166A15563 /* CRMacros.h in Headers */,
+				F5AE1525CD6725640DEB60C384D3EE7F /* CRMath.h in Headers */,
+				3BA873321C1461CEDC067DA0C2A3DC5A /* NSFoundation+CRBoost.h in Headers */,
+				CC20BE1DAEAF10AF3D659813ADF7000B /* UIColor+CRBoost.h in Headers */,
+				6BC441290545FE6BD1AA7EFD6A147413 /* UIFont+CRBoost.h in Headers */,
+				2CD0EA62BA486FEF14DF0DB270BF7E75 /* UIKit+CRBoost.h in Headers */,
+				0EBB4F3B688FA5E8B8138FD8AEB4B048 /* UIView+CRBoost.h in Headers */,
+				D160BCC03AE6F480A9574CE245D32AA2 /* Utility.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,23 +319,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4B6A7B147E4EDBE57778EF191D557A90 /* CRBoost */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 25B3886FE338172B87B8543AA5515BC7 /* Build configuration list for PBXNativeTarget "CRBoost" */;
-			buildPhases = (
-				9C5FA46D5CED54B838167F51AD01984A /* Sources */,
-				8D30BD78CE3C04774F42D2A9228255B7 /* Frameworks */,
-				0B53CB74C6ED16A7CD05C365B5E99ABA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CRBoost;
-			productName = CRBoost;
-			productReference = 155033076EBFF6FD903D720851B5D1A9 /* CRBoost.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4EC8FA8F7B06C665F9AA501BC0134804 /* Pods-CRBoost_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F913E8BD9606102D83A10E19110D3E77 /* Build configuration list for PBXNativeTarget "Pods-CRBoost_Tests" */;
@@ -310,6 +355,23 @@
 			productReference = 41D93B0613BC5BE61299790A70C6B89B /* Pods_CRBoost_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F668E6FA62C29E01E8B961D85E3FCDBB /* CRBoost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F6E4709B6C5C4BE1EF1F5ECFC8042C /* Build configuration list for PBXNativeTarget "CRBoost" */;
+			buildPhases = (
+				A0249D72727C224684A4B568111D6609 /* Sources */,
+				D195B299A78594F48A491D62676C2348 /* Frameworks */,
+				5D3D992F80ED5499221C50AC20D258D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CRBoost;
+			productName = CRBoost;
+			productReference = 155033076EBFF6FD903D720851B5D1A9 /* CRBoost.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -331,7 +393,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B6A7B147E4EDBE57778EF191D557A90 /* CRBoost */,
+				F668E6FA62C29E01E8B961D85E3FCDBB /* CRBoost */,
 				BE14B6BACEB535526FC57A1B7539D6DA /* Pods-CRBoost_Example */,
 				4EC8FA8F7B06C665F9AA501BC0134804 /* Pods-CRBoost_Tests */,
 			);
@@ -347,12 +409,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C5FA46D5CED54B838167F51AD01984A /* Sources */ = {
+		A0249D72727C224684A4B568111D6609 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51EE71455ED57A3C75DABE8CDC195248 /* CRBoost-dummy.m in Sources */,
-				0BD9380D45736AAE1FB79064DAF70D17 /* ReplaceMe.m in Sources */,
+				6BA212059C28793837D4B8DEF90550D8 /* CRBoost-dummy.m in Sources */,
+				285BB2E7A399DB30B3AC04E0F24998FF /* CRKeyboardUtility.m in Sources */,
+				FBFBE9AA0D9F0B19A040F09B1A94D1AE /* NSFoundation+CRBoost.m in Sources */,
+				705060F0F5961989D6742312D239EB72 /* UIColor+CRBoost.m in Sources */,
+				B0B6F73057F6E8F1734676ED7FCFB63A /* UIFont+CRBoost.m in Sources */,
+				A9F17B7915471677469D2A2FE970DC29 /* UIKit+CRBoost.m in Sources */,
+				D57E55A96F395DB2F3416BE4C2056CDF /* UIView+CRBoost.m in Sources */,
+				C7CA0D8351DF1BE3EA0EC182F7F7FE17 /* Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,46 +444,15 @@
 		64ADBD142D619C1B40F2CD592C83DAA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CRBoost;
-			target = 4B6A7B147E4EDBE57778EF191D557A90 /* CRBoost */;
+			target = F668E6FA62C29E01E8B961D85E3FCDBB /* CRBoost */;
 			targetProxy = 234688A997901DB041BF0A43158F616C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5E91DC21829DC793E5AAF8F18A1052FB /* Release */ = {
+		07910A3E69CFA3A6034F844E57F1D017 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35FB492C24719DA9FF5A58DFABC98332 /* CRBoost.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CRBoost/CRBoost-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CRBoost/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CRBoost/CRBoost.modulemap";
-				PRODUCT_MODULE_NAME = CRBoost;
-				PRODUCT_NAME = CRBoost;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		87E707E0FF7E6AFBC39AAF376476245A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35FB492C24719DA9FF5A58DFABC98332 /* CRBoost.xcconfig */;
+			baseConfigurationReference = 2DBA9993E12B2457EE95321E2B8E9834 /* CRBoost.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -538,6 +575,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		A128010C91EFA13166D7B06A4584750A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DBA9993E12B2457EE95321E2B8E9834 /* CRBoost.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CRBoost/CRBoost-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CRBoost/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CRBoost/CRBoost.modulemap";
+				PRODUCT_MODULE_NAME = CRBoost;
+				PRODUCT_NAME = CRBoost;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -701,15 +769,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25B3886FE338172B87B8543AA5515BC7 /* Build configuration list for PBXNativeTarget "CRBoost" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				87E707E0FF7E6AFBC39AAF376476245A /* Debug */,
-				5E91DC21829DC793E5AAF8F18A1052FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -724,6 +783,15 @@
 			buildConfigurations = (
 				CEFF3620C15ADFCC1F13F0AAA40FA6F7 /* Debug */,
 				E948FC476D9EA82DB9E2E4EEDBE90036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F6E4709B6C5C4BE1EF1F5ECFC8042C /* Build configuration list for PBXNativeTarget "CRBoost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07910A3E69CFA3A6034F844E57F1D017 /* Debug */,
+				A128010C91EFA13166D7B06A4584750A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

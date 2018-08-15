@@ -7,6 +7,7 @@
 //
 
 #import "UIKit+CRBoost.h"
+#import "NSFoundation+CRBoost.h"
 
 @implementation UIBarButtonItem (CRBoost)
 + (UIBarButtonItem *)barButtonWithImage:(UIImage *)image selectedImage:(UIImage *)selectedImage target:(id)target action:(SEL)action

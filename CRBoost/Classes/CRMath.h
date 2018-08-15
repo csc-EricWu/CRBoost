@@ -10,6 +10,8 @@
 #define CRMath_h
 
 #import <AVFoundation/AVFoundation.h>
+#import "NSFoundation+CRBoost.h"
+#import "CRMacros.h"
 
 #pragma mark -
 #pragma mark angle

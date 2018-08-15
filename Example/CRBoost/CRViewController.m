@@ -7,6 +7,7 @@
 //
 
 #import "CRViewController.h"
+#import <CRBoost/CRBoost.h>
 
 @interface CRViewController ()
 

@@ -7,6 +7,8 @@
 //
 
 #import "Utility.h"
+#import "CRMacros.h"
+#import "CRMath.h"
 
 @implementation Utility
 
@@ -123,9 +125,9 @@
 + (void)lockUserInteractionWithDuration:(NSTimeInterval)duration
 {
     [self lockUserInteraction];
-    [MTq after:duration block:^{
-        [self unlockUserInteraction];
-    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+         [self unlockUserInteraction];
+    });
 }
 
 #pragma mark -

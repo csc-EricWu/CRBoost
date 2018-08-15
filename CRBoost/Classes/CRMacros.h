@@ -55,8 +55,33 @@ typedef NSView UIView;
 //==================range==================
 #define CRRangeZero NSMakeRange(0, 0)
 
+#pragma mark -
+#pragma mark Default
+#define kBracketBigBegin                                                        @"{"
+#define kBracketBigEnd                                                          @"}"
+#define kSeparatorComma                                                         @","
+#define kSeparatorSlash                                                         @"/"
+#define kSeparatorDot                                                           @"."
+#define kSymbolQuestion                                                         @"?"
+#define kSeparatorBitAnd                                                        @"&"
+#define kSymbolEqual                                                            @"="
+#define kWhitespace                                                             @" "
+#define kEmptyString                                                            @""
+#define kSeparatorSolidDot                                                      @"●"
 
+//range
+#define JSON_RANGE_KEY                   @"range"
 
+//color
+#define JSON_COLOR_KEY                   @"color"
+//style
+#define JSON_STYLE_KEY                   @"style"
+//size
+#define JSON_SIZE_KEY                    @"size"
+#define JSON_WIDTH_KEY                   @"width"
+#define JSON_HEIGHT_KEY                  @"height"
+#define JSON_NEW_KEY                     @"new"
+#define JSON_OLD_KEY                     @"old";
 
 #pragma mark -
 #pragma mark class
