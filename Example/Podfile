@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CRBoost_Example' do
+  pod 'CRBoost', :path => '../'
+
+  target 'CRBoost_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
