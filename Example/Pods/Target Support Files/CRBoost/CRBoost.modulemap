@@ -1,0 +1,6 @@
+framework module CRBoost {
+  umbrella header "CRBoost-umbrella.h"
+
+  export *
+  module * { export * }
+}

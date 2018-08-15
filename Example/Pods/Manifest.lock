@@ -1,0 +1,16 @@
+PODS:
+  - CRBoost (0.1.0)
+
+DEPENDENCIES:
+  - CRBoost (from `../`)
+
+EXTERNAL SOURCES:
+  CRBoost:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CRBoost: 8380f781d398f5fa9cc0561d587e90c7fef81baa
+
+PODFILE CHECKSUM: 024949b49345ab88f6f5cf0c420ed8b7599ba1db
+
+COCOAPODS: 1.5.0

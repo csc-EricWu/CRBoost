@@ -1,0 +1,22 @@
+{
+  "name": "CRBoost",
+  "version": "0.1.0",
+  "summary": "A short description of CRBoost.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Eric Wu/CRBoost",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Eric Wu": "wuxiaofeng@app.fulu.com"
+  },
+  "source": {
+    "git": "https://github.com/Eric Wu/CRBoost.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CRBoost/Classes/**/*"
+}

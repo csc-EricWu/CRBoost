@@ -22,7 +22,7 @@ pod 'CRBoost'
 
 ## Author
 
-Eric Wu, wuxiaofeng@app.fulu.com
+Eric Wu, sleman@foxmail.com
 
 ## License
 
