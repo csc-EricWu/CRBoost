@@ -2,8 +2,8 @@
 //  CRMath.h
 //  TaxiNow
 //
-//  Created by Eric Wu on 15/12/11.
-//  Copyright © 2015年 Jigs. All rights reserved.
+//  Created by Eric Wu
+//  Copyright © 2016年 Cocoa. All rights reserved.
 //
 
 #ifndef CRMath_h
@@ -303,28 +303,83 @@ CRRootView(void) {
 CG_INLINE UINavigationController *
 CRRootNaviation(void) {
     return (UINavigationController *)CRRootViewController();
-    
 }
+
+CG_INLINE CGFloat
+CRNaviationHeight(void)
+{
+    if (IS_IPHONEX)
+    {
+        return 44 + 44;
+    }
+    else
+    {
+        return 64;
+    }
+//    if (@available(iOS 11.0, *))
+//    {
+//        return (CRSharedApp.keyWindow.safeAreaInsets.top + 44);
+//    }
+//    else
+//    {
+//        return 64;
+//    }
+}
+
 CG_INLINE void
 CRPopToViewController(__kindof Class controller)
 {
-    [CRRootNaviation().viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:controller])
+    if (CRKindClass(controller, UIViewController))
+    {
+        UINavigationController *navigation = ((UIViewController *)controller).navigationController;
+        [navigation.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:controller])
+            {
+                [CRRootNaviation() popToViewController:obj animated:YES];
+                *stop = YES;
+            }
+        }];
+    }
+}
+
+
+
+CG_INLINE UIViewController *
+CRRecursionTopViewController(UIViewController *controller)
+{
+    if (controller.presentedViewController)
+    {
+        return CRRecursionTopViewController(controller.presentedViewController);
+    }
+    else if ([controller isKindOfClass:[UITabBarController class]])
+    {
+        UITabBarController *tabBarCtrl = (UITabBarController *)controller;
+        return CRRecursionTopViewController(tabBarCtrl.selectedViewController);
+    }
+    else if ([controller isKindOfClass:[UINavigationController class]])
+    {
+        UINavigationController *navigationCtrl = (UINavigationController *)controller;
+        return CRRecursionTopViewController(navigationCtrl.visibleViewController);
+    }
+    else
+    {
+        for (UIViewController *childVc in controller.childViewControllers)
         {
-            [CRRootNaviation() popToViewController:obj animated:YES];
+            if (childVc && childVc.view.window)
+            {
+                controller = CRRecursionTopViewController(childVc);
+                break;
+            }
         }
-    }];
+        return controller;
+    }
 }
 
 CG_INLINE UIViewController *
-CRTopViewcontroller(void)
+CRTopViewController(void)
 {
     UIWindow *mainAppWindow = CRMainWindow();
-    UIViewController *topController = mainAppWindow.rootViewController;
-    while(topController.presentedViewController) {
-        topController = topController.presentedViewController;
-    }
-    
+    UIViewController *topController = CRRecursionTopViewController(mainAppWindow.rootViewController);
     return topController;
 }
 
@@ -437,7 +492,7 @@ CRPresentAlert(NSString *title, NSString *msg, AlertAction handler, NSString *ca
         }
     }
     va_end(args);
-    [CRTopViewcontroller() presentViewController:alertCtrl animated:YES completion:nil];
+    [CRTopViewController() presentViewController:alertCtrl animated:YES completion:nil];
     return alertCtrl;
 }
 
@@ -686,6 +741,9 @@ CRJSONString(id obj)
     NSError *error;
     NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:0 error:&error];
     NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    if (json) {
+        json = [json stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
+    }
     if (error)
     {
 
@@ -748,10 +806,18 @@ CRIsEmail(NSString *text)
     return CRIsMatch(pattern, text);
 }
 
+/**
+ * 判断字符串是否符合手机号码格式
+ * 移动号段: 134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188
+ * 联通号段: 130,131,132,145,155,156,170,171,175,176,185,186
+ * 电信号段: 133,149,153,170,173,177,180,181,189
+ * @param text 待检测的字符串
+ * @return 待检测的字符串
+ */
 CG_INLINE BOOL
 CRIsPhoneNumber(NSString *text)
 {
-    NSString *pattern = @"^1[3|4|5|7|8][0-9]\\d{8}$";
+    NSString *pattern = @"^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\\d{8}$";
     return CRIsMatch(pattern, text);
 }
 

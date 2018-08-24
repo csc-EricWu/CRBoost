@@ -2,8 +2,8 @@
 //  UIView+Position.m
 //  CRBoost
 //
-//  Created by Eric Wu on 9/13/13.
-//  Copyright (c) 2013 Cocoa. All rights reserved.
+//  Created by Eric Wu
+//  Copyright (c) 2016 Cocoa. All rights reserved.
 //
 
 #import "UIView+CRBoost.h"
@@ -12,8 +12,10 @@
 #import "CRMacros.h"
 #import "CRMath.h"
 
+static char kGradientLayerKey;
+
 @interface UIView ()
-@property (nonatomic, strong) UIView *topBanner;
+//@property (nonatomic, strong) UIView *topBanner;
 @property (nonatomic, strong) KeyboardStateTask keyboardWillShowTask;
 @property (nonatomic, strong) KeyboardStateTask keyboardWillHideTask;
 @end
@@ -103,6 +105,7 @@
     return superview;
 }
 
+
 - (id)childrenViewOfKind:(Class)kind
 {
     for (UIView *view in self.subviews)
@@ -110,6 +113,14 @@
         if (CRKindClass(view, kind))
         {
             return view;
+        }
+        else
+        {
+            UIView *subView = [view childrenViewOfKind:kind];
+            if (subView)
+            {
+                return subView;
+            }
         }
     }
     return nil;
@@ -173,11 +184,6 @@
     CRIfReturn(cornerRadius<0);
     self.layer.cornerRadius = cornerRadius;
     self.clipsToBounds = YES;
-
-    if (self.topBanner && !self.clipsToBounds) {
-//        [self adjustTopBannerToCorner];
-//        self.clipsToBounds = YES;
-    }
 }
 
 
@@ -345,8 +351,32 @@ static char keyboardWillHideTaskKey;
                     completion:nil];
 }
 
+#pragma mark -
+#pragma mark gradient
+- (void)setGradientBackground:(UIColor *)startColor toColor:(UIColor *)toColor
+{
+    if (self.gradientLayer)
+    {
+        [self.gradientLayer removeFromSuperlayer];
+        self.gradientLayer = nil;
+    }
+    self.gradientLayer = [CAGradientLayer layer];
+    self.gradientLayer.colors = @[(__bridge id)startColor.CGColor, (__bridge id)toColor.CGColor];
+    self.gradientLayer.startPoint = CGPointMake(0, 0);
+    self.gradientLayer.endPoint = CGPointMake(1.0, 0);
+    self.gradientLayer.locations = @[@0, @1.0];
+    self.gradientLayer.frame = CGRectMake(0, 0, self.width, self.height);
+    [self.layer insertSublayer:self.gradientLayer atIndex:0];
+}
 
-
+- (CAGradientLayer *)gradientLayer
+{
+    return objc_getAssociatedObject(self, &kGradientLayerKey);
+}
+- (void)setGradientLayer:(CAGradientLayer *)gradientLayer
+{
+    objc_setAssociatedObject(self, &kGradientLayerKey, gradientLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 #pragma mark -
 #pragma mark gesture

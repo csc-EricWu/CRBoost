@@ -1,9 +1,9 @@
 //
 //  Utility.m
-//  Object-C.Demo
+//  CRBoost
 //
-//  Created by Eric Wu on 16/1/7.
-//  Copyright © 2016年 bmkp. All rights reserved.
+//  Created by Eric Wu
+//  Copyright (c) 2016 Cocoa. All rights reserved.
 //
 
 #import "Utility.h"

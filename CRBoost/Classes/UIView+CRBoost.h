@@ -2,8 +2,8 @@
 //  UIView+Position.h
 //  CRBoost
 //
-//  Created by Eric Wu on 9/13/13.
-//  Copyright (c) 2013 Cocoa. All rights reserved.
+//  Created by Eric Wu
+//  Copyright (c) 2016 Cocoa. All rights reserved.
 //
 
 
@@ -30,6 +30,9 @@ typedef void(^KeyboardStateTask)(CGRect rect);
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGSize boundSize;
 @property (nonatomic, assign) CGFloat cornerRadius;
+
+@property (nonatomic, strong) CAGradientLayer *gradientLayer;
+- (void)setGradientBackground:(UIColor *)startColor toColor:(UIColor *)toColor;
 
 
 + (instancetype)viewWithSize:(CGSize)size;

@@ -2,8 +2,8 @@
 //  CRMacros.h
 //  TaxiNow
 //
-//  Created by Eric Wu on 15/12/11.
-//  Copyright © 2015年 Jigs. All rights reserved.
+//  Created by Eric Wu
+//  Copyright © 2016年 Cocoa. All rights reserved.
 //
 
 #ifndef CRMacros_h
@@ -123,6 +123,8 @@ typedef NSView UIView;
 #ifdef CR_iOS
 //==================model==================
 #define IS_IPHONE5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONEX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #endif
 
@@ -177,6 +179,8 @@ typedef NSView UIView;
 
 #define CRMainScreenW           CRMainScreen.bounds.size.width
 #define CRMainScreenH           CRMainScreen.bounds.size.height
+//#define CRNavigationH           if (@available(iOS 11.0, *)) {return (CRSharedApp.keyWindow.safeAreaInsets.top + 44);} else {return 64;}
+
 
 //==================user defaults==================
 #define CRUserDefaults              [NSUserDefaults standardUserDefaults]
@@ -265,15 +269,16 @@ return shared##classname;                               \
 #pragma mark -
 #pragma mark log
 //==================log==================
-#ifndef __OPTIMIZE__
-//#   define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String])
-#else
+//#ifndef __OPTIMIZE__
+//#   define NSLog(...) NSLog(__VA_ARGS__)
+//#else
 //#   define NSLog(...)
-#endif
+//#endif
 
 
 #ifdef DEBUG //debug
 #   define CRLog(fmt, ...) NSLog((@"%@->%@ <Line %d>: " fmt), NSStringFromClass([self class]), NSStringFromSelector(_cmd), __LINE__, ##__VA_ARGS__)
+#   define CRLowLog(fmt, ...) NSLog((@"%@ <Line %d>: " fmt), NSStringFromSelector(_cmd), __LINE__, ##__VA_ARGS__)
 
 #   define _ptp(point) DLOG(@"CGPoint: {%.0f, %.0f}", (point).x, (point).y)
 #   define _pts(size) DLOG(@"CGSize: {%.0f, %.0f}", (size).width, (size).height)
@@ -284,19 +289,34 @@ return shared##classname;                               \
 #   define _ptm    NSLog(@"\nmark called %s, at line %d", __PRETTY_FUNCTION__, __LINE__)
 #   define _if(con)     if(con) NSLog(@"\ncondition matched %s, at line %d", __PRETTY_FUNCTION__, __LINE__)
 
+
 #   define ULOG(fmt, ...)  { \
-NSString *title = [NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__]; \
-NSString *msg = [NSString stringWithFormat:fmt, ##__VA_ARGS__];     \
-UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title       \
-message:msg         \
-delegate:nil         \
-cancelButtonTitle:@"OK"       \
-otherButtonTitles:nil];       \
-[alert show]; \
+    NSString *title = [NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__];  \
+    NSString *msg = [NSString stringWithFormat:fmt, ##__VA_ARGS__];  \
+    UIAlertController *alertCtrl = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];\
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];\
+    [alertCtrl addAction:alertAction];\
+    [CRTopViewController() presentViewController:alertCtrl animated:YES completion:nil];\
 }
+
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//#   define ULOG(fmt, ...)  { \
+//    NSString *title = [NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__]; \
+//    NSString *msg = [NSString stringWithFormat:fmt, ##__VA_ARGS__];     \
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title       \
+//    message:msg         \
+//    delegate:nil         \
+//    cancelButtonTitle:@"OK"       \
+//    otherButtonTitles:nil];       \
+//    [alert show];           \
+//}
+//#pragma clang diagnostic pop
+
 #else //release
 #   define __OPTIMIZE__ 1
 #   define CRLog(...)
+#   define CRLowLog(...)
 #   define ULOG(...)
 #   define _ptp(point)
 #   define _pts(size)

@@ -1,6 +1,6 @@
 {
   "name": "CRBoost",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "A short description of CRBoost.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/csc-EricWu/CRBoost",
@@ -13,13 +13,13 @@
   },
   "source": {
     "git": "https://github.com/csc-EricWu/CRBoost",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "CRBoost/**/*",
-  "public_header_files": "CRBoost/**/*.{h}",
+  "source_files": "CRBoost/**/*.{h,m}",
+  "public_header_files": "CRBoost/CRBoost.h",
   "frameworks": [
     "UIKit",
     "Foundation"

@@ -2,8 +2,8 @@
 //  NSFoundation+CRBoost.h
 //  BMKP Driver Mobile
 //
-//  Created by Eric Wu on 15/12/29.
-//  Copyright © 2015年 Jigs. All rights reserved.
+//  Created by Eric Wu
+//  Copyright © 2016年 Cocoa. All rights reserved.
 //
 
 
@@ -53,6 +53,7 @@ extern NSString *const kPathFlagSelected;
 - (BOOL)containsString:(NSString *)string options:(NSStringCompareOptions)mask;
 
 - (NSString *)phoneNumberFormat;
+- (NSString *)randomStringWithLength:(NSInteger)len;
 
 
 

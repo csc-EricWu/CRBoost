@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CRBoost'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of CRBoost.'
 
 # This description is used to generate tags and improve search results.
@@ -29,14 +29,15 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'CRBoost/**/*'
-  
+  s.source_files = 'CRBoost/**/*.{h,m}'
+  s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
+
   # s.resource_bundles = {
   #   'CRBoost' => ['CRBoost/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.public_header_files = 'CRBoost/**/*.{h}'
+  s.public_header_files = 'CRBoost/CRBoost.h'
+
   s.frameworks = 'UIKit' ,'Foundation'
   s.module_name = 'CRBoost'
 

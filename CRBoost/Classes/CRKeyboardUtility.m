@@ -1,8 +1,8 @@
 //
 //  CRKeyboardUtility.m
 //
-//  Created by Eric Wu on 15/13/13.
-//  Copyright (c) 2013 Cocoa. All rights reserved.
+//  Created by Eric Wu
+//  Copyright (c) 2016 Cocoa. All rights reserved.
 //
 
 #import "CRKeyboardUtility.h"

@@ -2,8 +2,8 @@
 //  UIFont+CRBoost.m
 //  TED
 //
-//  Created by Eric Wu on 2/18/14.
-//  Copyright (c) 2014 Cocoa. All rights reserved.
+//  Created by Eric Wu
+//  Copyright (c) 2016 Cocoa. All rights reserved.
 //
 
 #import "UIFont+CRBoost.h"

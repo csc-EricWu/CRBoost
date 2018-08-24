@@ -2,8 +2,8 @@
 //  NSObject+UIKit_CRBoost.h
 //  BMKP Driver Mobile
 //
-//  Created by Eric Wu on 16/4/19.
-//  Copyright © 2016年 Jigs. All rights reserved.
+//  Created by Eric Wu
+//  Copyright © 2016年 Cocoa. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

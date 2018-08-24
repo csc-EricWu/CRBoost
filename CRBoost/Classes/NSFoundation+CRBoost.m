@@ -2,8 +2,8 @@
 //  NSFoundation+CRBoost.m
 //  BMKP Driver Mobile
 //
-//  Created by Eric Wu on 15/12/29.
-//  Copyright © 2015年 Jigs. All rights reserved.
+//  Created by Eric Wu
+//  Copyright © 2016年 Cocoa. All rights reserved.
 //
 
 #import "NSFoundation+CRBoost.h"
@@ -271,7 +271,17 @@ NSString *const kPathFlagSelected = @"Slt";
     }
     return self;
 }
-
+- (NSString *)randomStringWithLength:(NSInteger)len
+{
+    if (!self)
+        return self;
+    NSMutableString *randomString = [NSMutableString stringWithCapacity:len];
+    for (NSInteger i = 0; i < len; i++)
+    {
+        [randomString appendFormat:@"%C", [self characterAtIndex:arc4random_uniform((int)[self length])]];
+    }
+    return randomString;
+}
 
 @end
 
@@ -293,12 +303,20 @@ NSString *const kPathFlagSelected = @"Slt";
 
 + (NSDate *)dateWithTimeIntervalSince1970Number:(NSNumber *)number {
     NSTimeInterval timeInterval = [number doubleValue];
+    if (timeInterval > 140000000000)
+    {
+        timeInterval = timeInterval / 1000;
+    }
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     return date;
 }
 
 + (NSDate *)dateWithTimeIntervalSince1970String:(NSString *)string {
     NSTimeInterval timeInterval = [string doubleValue];
+    if (timeInterval > 140000000000)
+    {
+        timeInterval = timeInterval / 1000;
+    }
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     return date;
 }
