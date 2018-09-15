@@ -19,6 +19,9 @@
     "ios": "8.0"
   },
   "source_files": "CRBoost/**/*.{h,m}",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "public_header_files": "CRBoost/CRBoost.h",
   "frameworks": [
     "UIKit",

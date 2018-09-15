@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CRBoost: 67eb294adac591054253abecffb31bf9777cb0ea
+  CRBoost: c7bcc184ba982ecb540f8559548f3bbeffffdf12
 
 PODFILE CHECKSUM: 024949b49345ab88f6f5cf0c420ed8b7599ba1db
 

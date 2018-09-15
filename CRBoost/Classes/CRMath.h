@@ -300,6 +300,11 @@ CRRootView(void) {
     return [[CRMainWindow() rootViewController] view];
 }
 
+CG_INLINE UITabBarController *
+CRRootTabBar(void) {
+    return (UITabBarController *)CRRootViewController();
+}
+
 CG_INLINE UINavigationController *
 CRRootNaviation(void) {
     return (UINavigationController *)CRRootViewController();
@@ -335,7 +340,7 @@ CRPopToViewController(__kindof Class controller)
         [navigation.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj isKindOfClass:controller])
             {
-                [CRRootNaviation() popToViewController:obj animated:YES];
+                [navigation popToViewController:obj animated:YES];
                 *stop = YES;
             }
         }];
