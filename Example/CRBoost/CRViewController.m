@@ -22,7 +22,13 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-
+    if (@available(iOS 11.0, *))
+    {
+        CRLog(@"safeAreaInsets :%@", NSStringFromUIEdgeInsets(CRSharedApp.keyWindow.safeAreaInsets));
+    }
+    else
+    {
+    }
     CRLog(@"CRNavigationH: %f", CRNaviationHeight());
     ULOG(@"%@",@"ddd");
 }

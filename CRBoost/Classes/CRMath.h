@@ -313,22 +313,27 @@ CRRootNaviation(void) {
 CG_INLINE CGFloat
 CRNaviationHeight(void)
 {
-    if (IS_IPHONEX)
-    {
-        return 44 + 44;
-    }
-    else
-    {
-        return 64;
-    }
-//    if (@available(iOS 11.0, *))
+//    if (IS_IPHONEX)
 //    {
-//        return (CRSharedApp.keyWindow.safeAreaInsets.top + 44);
+//        return 44 + 44;
 //    }
 //    else
 //    {
 //        return 64;
 //    }
+    if (@available(iOS 11.0, *))
+    {
+        UIEdgeInsets insets = CRSharedApp.keyWindow.safeAreaInsets;
+        if (UIEdgeInsetsEqualToEdgeInsets(insets, UIEdgeInsetsZero)) {
+            return 64;
+        }
+        else
+            return (CRSharedApp.keyWindow.safeAreaInsets.top + 44);
+    }
+    else
+    {
+        return 64;
+    }
 }
 
 CG_INLINE void
