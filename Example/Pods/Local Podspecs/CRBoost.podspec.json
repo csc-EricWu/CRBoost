@@ -1,6 +1,6 @@
 {
   "name": "CRBoost",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "summary": "A short description of CRBoost.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/csc-EricWu/CRBoost",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/csc-EricWu/CRBoost",
-    "tag": "0.1.3"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "8.0"

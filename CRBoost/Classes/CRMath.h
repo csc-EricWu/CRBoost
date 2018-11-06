@@ -272,6 +272,14 @@ CRScreenRect() {
     return CRScreenBounds(CRScreenIsLandscape());
 }
 
+CG_INLINE BOOL
+CRIsIphoneX() {
+    return (CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375, 812)) ||//X  or Xs
+            CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(812, 375)) ||//X  or Xs
+            CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(414, 896)) ||//iPhone Xs Max | Xr
+            CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(896, 414)));//iPhone Xs Max | Xr
+}
+
 
 CG_INLINE UIWindow *
 CRMainWindow(void) {
@@ -335,7 +343,37 @@ CRNaviationHeight(void)
         return 64;
     }
 }
+CG_INLINE CGFloat
+CRBottomAdditionalHeight(void)
+{
+    if (@available(iOS 11.0, *))
+    {
+        UIEdgeInsets insets = CRSharedApp.keyWindow.safeAreaInsets;
+        return insets.bottom;
+    }
+    else
+    {
+        return 0;
+    }
+}
 
+CG_INLINE CGFloat
+CRTabBarHeight(UIViewController *controller)
+{
+    CGFloat height = 0;
+    if (controller.tabBarController && controller.tabBarController.tabBar.hidden) {
+        height = controller.tabBarController.tabBar.bounds.size.height;
+    }
+    if (@available(iOS 11.0, *))
+    {
+        UIEdgeInsets insets = CRSharedApp.keyWindow.safeAreaInsets;
+        height += insets.bottom;
+    }
+    else
+    {
+    }
+    return height;
+}
 CG_INLINE void
 CRPopToViewController(__kindof Class controller)
 {
