@@ -374,22 +374,23 @@ CRTabBarHeight(UIViewController *controller)
     }
     return height;
 }
-CG_INLINE void
-CRPopToViewController(__kindof Class controller)
+
+CG_INLINE BOOL
+CRPopToViewController(UINavigationController *navigation, __kindof Class controller, BOOL animated)
 {
-    if (CRKindClass(controller, UIViewController))
-    {
-        UINavigationController *navigation = ((UIViewController *)controller).navigationController;
+    __block BOOL found = NO;
+    if ([navigation isKindOfClass:[UINavigationController class]]) {
         [navigation.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj isKindOfClass:controller])
             {
-                [navigation popToViewController:obj animated:YES];
+                found = YES;
+                [navigation popToViewController:obj animated:animated];
                 *stop = YES;
             }
         }];
     }
+    return found;
 }
-
 
 
 CG_INLINE UIViewController *
