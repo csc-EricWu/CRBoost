@@ -498,6 +498,10 @@ CRFileExistsAtPath(NSString *path) {
 #pragma mark url
 CG_INLINE NSURL *
 CRURL(NSString *url) {
+    if ([url isKindOfClass:[NSNull class]] || url == nil)
+    {
+        return nil;
+    }
     return [NSURL URLWithString: url];
 }
 
@@ -866,7 +870,8 @@ CRIsEmail(NSString *text)
 CG_INLINE BOOL
 CRIsPhoneNumber(NSString *text)
 {
-    NSString *pattern = @"^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\\d{8}$";
+//    NSString *pattern = @"^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\\d{8}$";
+    NSString *pattern = @"^[1][3-9][0-9]{9}$";//匹配虚拟号码
     return CRIsMatch(pattern, text);
 }
 
