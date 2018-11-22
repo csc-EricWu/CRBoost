@@ -286,7 +286,18 @@ NSString *const kPathFlagSelected = @"Slt";
 @end
 
 
-
+#pragma mark -
+#pragma mark NSURL
+@implementation NSURL (CRBoost)
+- (NSString *)absoluteStringByTrimmingQuery
+{
+    NSURLComponents *urlcomponents = [NSURLComponents componentsWithURL:self resolvingAgainstBaseURL:NO];
+    if (urlcomponents) {
+        urlcomponents.query = nil;
+    }
+    return urlcomponents.string;
+}
+@end
 
 
 #pragma mark -

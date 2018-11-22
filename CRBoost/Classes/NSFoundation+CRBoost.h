@@ -59,6 +59,13 @@ extern NSString *const kPathFlagSelected;
 
 @end
 
+#pragma mark -
+#pragma mark NSURL
+@interface NSURL (CRBoost)
+- (NSString *)absoluteStringByTrimmingQuery;
+
+
+@end
 
 #pragma mark -
 #pragma mark NSDate
