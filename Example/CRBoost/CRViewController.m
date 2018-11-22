@@ -22,6 +22,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    
     if (@available(iOS 11.0, *))
     {
         CRLog(@"safeAreaInsets :%@", NSStringFromUIEdgeInsets(CRSharedApp.keyWindow.safeAreaInsets));
@@ -30,12 +31,7 @@
     {
     }
     CRLog(@"CRNavigationH: %f", CRNaviationHeight());
-    ULOG(@"%@",@"ddd");
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    ULOG(@"%@", [@"40" removeDecimalLastZeros]);
 }
 
 @end

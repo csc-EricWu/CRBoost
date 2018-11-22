@@ -233,7 +233,7 @@ NSString *const kPathFlagSelected = @"Slt";
 - (NSString *)removeDecimalLastZeros
 {
     NSString *result = self;
-    while ([result hasSuffix:@"0"])
+    while ([result containsString:@"."] && [result hasSuffix:@"0"])
     {
         result = [self substringToIndex:result.length - 1];
     }
