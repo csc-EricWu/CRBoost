@@ -321,27 +321,7 @@ CRRootNaviation(void) {
 CG_INLINE CGFloat
 CRNaviationHeight(void)
 {
-//    if (IS_IPHONEX)
-//    {
-//        return 44 + 44;
-//    }
-//    else
-//    {
-//        return 64;
-//    }
-    if (@available(iOS 11.0, *))
-    {
-        UIEdgeInsets insets = CRSharedApp.keyWindow.safeAreaInsets;
-        if (UIEdgeInsetsEqualToEdgeInsets(insets, UIEdgeInsetsZero)) {
-            return 64;
-        }
-        else
-            return (CRSharedApp.keyWindow.safeAreaInsets.top + 44);
-    }
-    else
-    {
-        return 64;
-    }
+    return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) + 44;
 }
 CG_INLINE CGFloat
 CRBottomAdditionalHeight(void)
