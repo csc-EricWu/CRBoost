@@ -1,6 +1,0 @@
-framework module Pods_CRBoost_Tests {
-  umbrella header "Pods-CRBoost_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

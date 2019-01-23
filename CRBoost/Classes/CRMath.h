@@ -412,6 +412,17 @@ CRTopViewController(void)
     return topController;
 }
 
+CG_INLINE UIViewController *
+CRTopMostController(void)
+{
+    UIViewController *topviewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        while (topviewController.presentedViewController) {
+        topviewController = topviewController.presentedViewController;
+    }
+    return topviewController;
+}
+
+
 CG_INLINE BOOL
 CRKeyboardHide(void) {
     UIWindow *window = CRMainWindow();

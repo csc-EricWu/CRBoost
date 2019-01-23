@@ -318,7 +318,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CRBoost/CRBoost.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -327,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E013E33D3C07881E5E2A09EB /* [CP] Check Pods Manifest.lock */ = {
