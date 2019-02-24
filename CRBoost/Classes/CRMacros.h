@@ -179,7 +179,6 @@ typedef NSView UIView;
 
 #define CRMainScreenW           CRMainScreen.bounds.size.width
 #define CRMainScreenH           CRMainScreen.bounds.size.height
-//#define CRNavigationH           if (@available(iOS 11.0, *)) {return (CRSharedApp.keyWindow.safeAreaInsets.top + 44);} else {return 64;}
 
 
 //==================user defaults==================
