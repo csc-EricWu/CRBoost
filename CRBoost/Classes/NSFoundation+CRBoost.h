@@ -38,6 +38,8 @@ extern NSString *const kPathFlagSelected;
 - (NSString *)join:(NSString *)path;
 - (NSString *)joinExt:(NSString *)ext;
 - (NSString *)joinUrl:(NSString *)url;
+- (NSString *)URLStringByAppendingQueryString:(NSString *)queryString;
+
 - (NSString *)joinPath:(NSString *)path;
 - (NSString *)joinPath:(NSString *)path1 path:(NSString *)path2;
 - (NSString *)deleteLastPathComponent;
@@ -62,9 +64,13 @@ extern NSString *const kPathFlagSelected;
 #pragma mark -
 #pragma mark NSURL
 @interface NSURL (CRBoost)
+
+/**
+ remove the url query
+ */
 - (NSString *)absoluteStringByTrimmingQuery;
 
-
+- (NSURL *)URLByAppendingQueryString:(NSString *)queryString;
 @end
 
 #pragma mark -
