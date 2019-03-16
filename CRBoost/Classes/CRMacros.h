@@ -123,7 +123,9 @@ typedef NSView UIView;
 #ifdef CR_iOS
 //==================model==================
 #define IS_IPHONE5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-//#define IS_IPHONEX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONE6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONEPLUS ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
 //using CRIsIphoneX()
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #endif
@@ -278,6 +280,7 @@ return shared##classname;                               \
 #ifdef DEBUG //debug
 #   define CRLog(fmt, ...) NSLog((@"%@->%@ <Line %d>: " fmt), NSStringFromClass([self class]), NSStringFromSelector(_cmd), __LINE__, ##__VA_ARGS__)
 #   define CRLowLog(fmt, ...) NSLog((@"%@ <Line %d>: " fmt), NSStringFromSelector(_cmd), __LINE__, ##__VA_ARGS__)
+#   define OSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 #   define _ptp(point) DLOG(@"CGPoint: {%.0f, %.0f}", (point).x, (point).y)
 #   define _pts(size) DLOG(@"CGSize: {%.0f, %.0f}", (size).width, (size).height)
@@ -317,6 +320,7 @@ return shared##classname;                               \
 #   define CRLog(...)
 #   define CRLowLog(...)
 #   define ULOG(...)
+#   define OSLog(...)
 #   define _ptp(point)
 #   define _pts(size)
 #   define _ptr(rect)

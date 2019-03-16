@@ -1,6 +1,6 @@
 # CRBoost
 
-[![Version](https://img.shields.io/cocoapods/v/CRBoost.svg?style=flat)](https://cocoapods.org/pods/CRBoost)
+![0.2.0](https://img.shields.io/cocoapods/v/CRBoost.svg?style=flat)
 [![License](https://img.shields.io/cocoapods/l/CRBoost.svg?style=flat)](https://cocoapods.org/pods/CRBoost)
 [![Platform](https://img.shields.io/cocoapods/p/CRBoost.svg?style=flat)](https://cocoapods.org/pods/CRBoost)
 
