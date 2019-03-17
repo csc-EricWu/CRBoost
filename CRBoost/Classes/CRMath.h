@@ -739,17 +739,19 @@ CRJSONIsDictionary(id json) {
 
 CG_INLINE id
 CRJSONFromQuery(NSString *query) {
-    NSArray *tokens = [query componentsSeparatedByString:@"&"];
+    if (!query) {
+        return nil;
+    }
+    NSURLComponents *cmp = [NSURLComponents componentsWithString:query];
+    if (!cmp.query) {
+        cmp.query = query;
+    }
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
-    
-    [tokens enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSString *token = obj;
-        NSArray *keyValue = [token componentsSeparatedByString:@"="];
-        if (keyValue.count == 2) {
-            json[keyValue[0]] = keyValue[1];
+    [cmp.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.name && obj.value) {
+            json[obj.name] = obj.value;
         }
     }];
-    
     return json.count>0 ? json : nil;
 }
 
