@@ -183,7 +183,13 @@
 {
     if ([CRSharedApp canOpenURL:url])
     {
-        [CRSharedApp openURL:url];
+        if (@available(iOS 10.0, *)) {
+            [CRSharedApp openURL:url options:@{} completionHandler:^(BOOL success) {
+                
+            }];
+        } else {
+            [CRSharedApp openURL:url];
+        }
     }
 }
 

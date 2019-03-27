@@ -796,32 +796,11 @@ CRJSONString(id obj)
     }
     return json;
 }
-
-CG_INLINE BOOL
-CRIsMatch(NSString *pattern, NSString *text)
-{
-    if (text.length == 0)
-    {
-        return NO;
-    }
-    if (pattern.length == 0)
-    {
-        return YES;
-    }
-    NSError *error;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
-    NSTextCheckingResult *result = [regex firstMatchInString:text options:0 range:NSMakeRange(0, [text length])];
-    if (result)
-    {
-        return YES;
-    }
-    return NO;
-}
-
+#pragma mark -
+#pragma mark match
 CG_INLINE NSArray<NSTextCheckingResult *> *
 CRMatches(NSString *pattern, NSString *text)
 {
-    
     if (text.length == 0)
     {
         return nil;
@@ -831,6 +810,7 @@ CRMatches(NSString *pattern, NSString *text)
     NSArray *results=[regex matchesInString:text options:0 range:NSMakeRange(0, [text length])];
     return results;
 }
+
 CG_INLINE NSTextCheckingResult *
 CRMatch(NSString *pattern, NSString *text)
 {
@@ -843,6 +823,20 @@ CRMatch(NSString *pattern, NSString *text)
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
     NSTextCheckingResult *result = [regex firstMatchInString:text options:0 range:NSMakeRange(0, [text length])];
     return result;
+}
+
+CG_INLINE BOOL
+CRIsMatch(NSString *pattern, NSString *text)
+{
+    if (text.length == 0)
+    {
+        return NO;
+    }
+    if (pattern.length == 0)
+    {
+        return YES;
+    }
+    return CRMatch(pattern, text) ? YES : NO;
 }
 
 CG_INLINE BOOL
@@ -882,8 +876,6 @@ CRIsURL(NSString *text)
     NSString *pattern = @"(https?)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]";
     return CRIsMatch(pattern, text);
 }
-
-
 
 
 CG_INLINE BOOL
