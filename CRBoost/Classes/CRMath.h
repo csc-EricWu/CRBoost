@@ -773,7 +773,7 @@ CRQueryFromJSON(NSDictionary *json)
 }
 
 CG_INLINE void
-CRCallWithPhoneNumber(NSString *phone)
+CRCallPhoneNumber(NSString *phone)
 {
     NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"tel:%@", phone];
     UIWebView *callWebview = [[UIWebView alloc] init];

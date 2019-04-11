@@ -1,5 +1,5 @@
 PODS:
-  - CRBoost (0.2.1)
+  - CRBoost (0.2.2)
 
 DEPENDENCIES:
   - CRBoost (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CRBoost: 51e1c03660e6a6229760f158ca9858eab0ef3d21
+  CRBoost: 1e43d51735135b85aa595199ffcdfe23d6f018e8
 
 PODFILE CHECKSUM: 024949b49345ab88f6f5cf0c420ed8b7599ba1db
 

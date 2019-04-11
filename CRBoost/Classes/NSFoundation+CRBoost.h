@@ -203,4 +203,5 @@ typedef NS_ENUM(NSUInteger, UIImageType) {
 
 - (UIImage *)scaleToSize:(CGSize)size opaque:(BOOL)opaque scale:(CGFloat)scale;
 - (UIImage *)imageByApplyingAlpha:(CGFloat)alpha;
+- (UIImage *)resizeWithImageMode:(UIImageResizingMode)resizingMode;
 @end

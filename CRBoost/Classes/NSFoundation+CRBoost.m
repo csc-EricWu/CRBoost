@@ -978,6 +978,17 @@ static char kImageTypeKey;
     return newImage;
 }
 
+- (UIImage *)resizeWithImageMode:(UIImageResizingMode)resizingMode
+{
+    if (!self) {
+        return self;
+    }
+    CGFloat top = self.size.height / 2.0;
+    CGFloat left = self.size.width / 2.0;
+    CGFloat bottom = self.size.height / 2.0;
+    CGFloat right = self.size.width / 2.0;
+    return [self resizableImageWithCapInsets:UIEdgeInsetsMake(top, left, bottom, right) resizingMode:resizingMode];
+}
 + (UIImage *)imageByScalingImage:(UIImage *)image toSize:(CGSize)newSize
 {
     //image.scale or [UIScreen mainScreen].scale)
