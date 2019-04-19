@@ -1,7 +1,14 @@
 use_frameworks!
+platform :ios, '8.0'
+inhibit_all_warnings!
 
 target 'CRBoost_Example' do
   pod 'CRBoost', :path => '../'
+  
+#  pod 'AFNetworking'
+#  pod 'WechatOpenSDK'  #微信官方sdk
+#  pod 'AlipaySDK-iOS'  #支付宝官方sdk
+#  pod 'ICBCPaySDK' , :path => './Library/ICBCPaySDK'
 
   target 'CRBoost_Tests' do
     inherit! :search_paths

@@ -7,12 +7,13 @@
 //
 
 #import "CRAppDelegate.h"
-
+//#import <ICBCPaySDK/ICBCPaySDK.h>
 @implementation CRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+//    NSString *version = [[ICBCPaySDK sharedSdk] getVersion];
+//    NSLog(@"ICBCPaySDK version :%@", version);
     return YES;
 }
 
