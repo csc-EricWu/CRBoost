@@ -323,18 +323,22 @@ CRNaviationHeight(void)
 {
     return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) + 44;
 }
+
+CG_INLINE UIEdgeInsets
+CRSafeAreaInsets(void)
+{
+    UIEdgeInsets insets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *))
+    {
+        insets = CRSharedApp.keyWindow.safeAreaInsets;
+    }
+    return insets;
+}
+
 CG_INLINE CGFloat
 CRBottomAdditionalHeight(void)
 {
-    if (@available(iOS 11.0, *))
-    {
-        UIEdgeInsets insets = CRSharedApp.keyWindow.safeAreaInsets;
-        return insets.bottom;
-    }
-    else
-    {
-        return 0;
-    }
+    return CRSafeAreaInsets().bottom;
 }
 
 CG_INLINE CGFloat
