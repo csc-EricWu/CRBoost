@@ -26,6 +26,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     CRLog(@"CRNavigationH: %f", CRNaviationHeight());
+    CGSize size = [UIImage imageSizeWithURL:CRURL(@"https://cmsqa-oss.sgmlink.com/5a308f92a7f6f/C766BEB0-2293-4F55-91BD-8EE8499FDE5D.png")];
+    CRLog(@"size :%@", NSStringFromCGSize(size));
     //    ULOG(@"%@", [@"40" removeDecimalLastZeros]);
     //    NSString *qr = @"BAIDUQRvin=LSGEM0000L0000060&baiduQrCode=cGFzc3BvcnQuYmFpZHUuY29tL3YyL2FwaS9xcmNvZGU/c2lnbj1hOGQ2ZWI5YmJiMDE0NGNhNmM2YzkwMDFmZGZiMmIxZSZ1YW9ubHk9JmNsaWVudF9pZD0mbHA9YXBwJmNsaWVudD1hbmRyb2lkJnFybG9naW5mcm9tPSZ3ZWNoYXQ9JnRyYWNlaWQ9JmFwcE5hbWU9JUU0JUI4JThBJUU2JUIxJUJEJUU5JTgwJTlBJUU3JTk0JUE4==";
     //    NSString *urlString = @"http://baidu.com";

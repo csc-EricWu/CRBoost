@@ -200,8 +200,8 @@ typedef NS_ENUM(NSUInteger, UIImageType) {
 + (UIImage *)imageFromView:(UIView *)view;
 + (UIImage *)imageFromView:(UIView *)view size:(CGSize)size scale:(CGFloat)scale;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
-
 - (UIImage *)scaleToSize:(CGSize)size opaque:(BOOL)opaque scale:(CGFloat)scale;
 - (UIImage *)imageByApplyingAlpha:(CGFloat)alpha;
 - (UIImage *)resizeWithImageMode:(UIImageResizingMode)resizingMode;
++ (CGSize)imageSizeWithURL:(NSURL *)URL;
 @end
