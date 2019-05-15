@@ -128,6 +128,14 @@ typedef NSView UIView;
 
 //using CRIsIphoneX()
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define kSystemVersion  [[UIDevice currentDevice].systemVersion floatValue]
+#define IS_IOS8         (kSystemVersion >= 8 && kSystemVersion < 9)
+#define IS_IOS9         (kSystemVersion >= 9 && kSystemVersion < 10)
+#define IS_IOS10        (kSystemVersion >= 10 && kSystemVersion < 11)
+#define IS_IOS11        (kSystemVersion >= 11 && kSystemVersion < 12)
+#define IS_IOS12        (kSystemVersion >= 12 && kSystemVersion < 13)
+#define IS_IOS13        (kSystemVersion >= 13 && kSystemVersion < 14)
+
 #endif
 
 #if TARGET_OS_IPHONE
