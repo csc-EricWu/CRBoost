@@ -345,7 +345,7 @@ CG_INLINE CGFloat
 CRTabBarHeight(UIViewController *controller)
 {
     CGFloat height = 0;
-    if (controller.tabBarController && controller.tabBarController.tabBar.hidden) {
+    if (controller.tabBarController && !controller.tabBarController.tabBar.hidden) {
         height = controller.tabBarController.tabBar.bounds.size.height;
     }
     if (@available(iOS 11.0, *))
