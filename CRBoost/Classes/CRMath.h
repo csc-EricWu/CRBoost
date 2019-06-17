@@ -350,8 +350,7 @@ CRTabBarHeight(UIViewController *controller)
     }
     if (@available(iOS 11.0, *))
     {
-        UIEdgeInsets insets = CRSharedApp.keyWindow.safeAreaInsets;
-        height += insets.bottom;
+        height += CRBottomAdditionalHeight();
     }
     else
     {

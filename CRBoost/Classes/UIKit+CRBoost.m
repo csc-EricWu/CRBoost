@@ -104,12 +104,9 @@
         if (![[NSThread currentThread] isMainThread])
         {
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-
             dispatch_async(dispatch_get_main_queue(), ^{
-
                 NSString *result = [self stringByEvaluatingJavaScriptFromString:requestDurationString];
                 duration = [result doubleValue];
-
                 dispatch_semaphore_signal(sema);
             });
             dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
@@ -133,7 +130,6 @@
         if (![[NSThread currentThread] isMainThread])
         {
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSString *result = [self stringByEvaluatingJavaScriptFromString:requestDurationString];
                 currentTime = [result doubleValue];
@@ -158,10 +154,8 @@
         if (![[NSThread currentThread] isMainThread])
         {
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self stringByEvaluatingJavaScriptFromString:playString];
-
                 dispatch_semaphore_signal(sema);
             });
             dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
@@ -181,10 +175,8 @@
         if (![[NSThread currentThread] isMainThread])
         {
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self stringByEvaluatingJavaScriptFromString:pauseString];
-
                 dispatch_semaphore_signal(sema);
             });
             dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
@@ -204,10 +196,8 @@
         if (![[NSThread currentThread] isMainThread])
         {
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self stringByEvaluatingJavaScriptFromString:resumeString];
-
                 dispatch_semaphore_signal(sema);
             });
             dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
@@ -229,7 +219,6 @@
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self stringByEvaluatingJavaScriptFromString:stopString];
-
                 dispatch_semaphore_signal(sema);
             });
             dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
@@ -241,3 +230,201 @@
     }
 }
 @end
+
+@implementation WKWebView (CRBoost)
+
+- (NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script
+{
+    __block NSString *resultString = nil;
+    __block BOOL finished = NO;
+    [self evaluateJavaScript:script completionHandler:^(id result, NSError *error) {
+        if (error == nil) {
+            if (result != nil) {
+                resultString = [NSString stringWithFormat:@"%@", result];
+            }
+        } else {
+            NSLog(@"evaluateJavaScript error : %@", error.localizedDescription);
+        }
+        finished = YES;
+    }];
+    while (!finished)
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    return resultString;
+}
+- (BOOL)hasVideo
+{
+    __block BOOL hasVideoTag = NO;
+    NSString *hasVideoTestString = @"document.documentElement.getElementsByTagName(\"video\").length";
+    if (![[NSThread currentThread] isMainThread])
+    {
+        dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *result = [self stringByEvaluatingJavaScriptFromString:hasVideoTestString];
+            hasVideoTag = [result integerValue] >= 1 ? YES : NO;
+            dispatch_semaphore_signal(sema);
+        });
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    }
+    else
+    {
+        NSString *result = [self stringByEvaluatingJavaScriptFromString:hasVideoTestString];
+        hasVideoTag = [result integerValue] >= 1 ? YES : NO;
+    }
+    return hasVideoTag;
+}
+- (NSString *)readVideoTitle
+{
+    __block NSString *title = nil;
+    if (![[NSThread currentThread] isMainThread])
+    {
+        dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            title = [self stringByEvaluatingJavaScriptFromString:@"document.title"];
+            dispatch_semaphore_signal(sema);
+        });
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    }
+    else
+    {
+        title = [self stringByEvaluatingJavaScriptFromString:@"document.title"];
+    }
+    return title;
+}
+
+- (double)readVideoDuration
+{
+    __block double duration = 0;
+    if ([self hasVideo])
+    {
+        NSString *requestDurationString = @"document.documentElement.getElementsByTagName(\"video\")[0].duration.toFixed(1)";
+        if (![[NSThread currentThread] isMainThread])
+        {
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *result = [self stringByEvaluatingJavaScriptFromString:requestDurationString];
+                duration = [result doubleValue];
+                
+                dispatch_semaphore_signal(sema);
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        }
+        else
+        {
+            NSString *result = [self stringByEvaluatingJavaScriptFromString:requestDurationString];
+            duration = [result doubleValue];
+        }
+    }
+    return duration;
+}
+
+- (double)readVideoCurrentTime
+{
+    __block double currentTime = 0;
+    
+    if ([self hasVideo])
+    {
+        NSString *requestDurationString = @"document.documentElement.getElementsByTagName(\"video\")[0].currentTime.toFixed(1)";
+        if (![[NSThread currentThread] isMainThread])
+        {
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *result = [self stringByEvaluatingJavaScriptFromString:requestDurationString];
+                currentTime = [result doubleValue];
+                dispatch_semaphore_signal(sema);
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        }
+        else
+        {
+            NSString *result = [self stringByEvaluatingJavaScriptFromString:requestDurationString];
+            currentTime = [result doubleValue];
+        }
+    }
+    return currentTime;
+}
+
+- (void)play
+{
+    if ([self hasVideo])
+    {
+        NSString *playString = @"document.documentElement.getElementsByTagName(\"video\")[0].play()";
+        if (![[NSThread currentThread] isMainThread])
+        {
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self stringByEvaluatingJavaScriptFromString:playString];
+                dispatch_semaphore_signal(sema);
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        }
+        else
+        {
+            [self stringByEvaluatingJavaScriptFromString:playString];
+        }
+    }
+}
+
+- (void)pause
+{
+    if ([self hasVideo])
+    {
+        NSString *pauseString = @"document.documentElement.getElementsByTagName(\"video\")[0].pause()";
+        if (![[NSThread currentThread] isMainThread])
+        {
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self stringByEvaluatingJavaScriptFromString:pauseString];
+                dispatch_semaphore_signal(sema);
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        }
+        else
+        {
+            [self stringByEvaluatingJavaScriptFromString:pauseString];
+        }
+    }
+}
+
+- (void)resume
+{
+    if ([self hasVideo])
+    {
+        NSString *resumeString = @"document.documentElement.getElementsByTagName(\"video\")[0].play()";
+        if (![[NSThread currentThread] isMainThread])
+        {
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self stringByEvaluatingJavaScriptFromString:resumeString];
+                dispatch_semaphore_signal(sema);
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        }
+        else
+        {
+            [self stringByEvaluatingJavaScriptFromString:resumeString];
+        }
+    }
+}
+
+- (void)stop
+{
+    if ([self hasVideo])
+    {
+        NSString *stopString = @"document.documentElement.getElementsByTagName(\"video\")[0].pause()";
+        if (![[NSThread currentThread] isMainThread])
+        {
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self stringByEvaluatingJavaScriptFromString:stopString];
+                dispatch_semaphore_signal(sema);
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        }
+        else
+        {
+            [self stringByEvaluatingJavaScriptFromString:stopString];
+        }
+    }
+}
+@end
+

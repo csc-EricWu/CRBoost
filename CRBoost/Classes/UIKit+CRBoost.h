@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UIView+CRBoost.h"
+@import WebKit;
 
 @interface UIBarButtonItem (CRBoost)
 + (instancetype)barButtonWithImage:(UIImage *)image selectedImage:(UIImage *)selectedImage target:(id)target action:(SEL)action;
@@ -27,6 +28,21 @@
 @end
 
 @interface UIWebView (CRBoost)
+
+- (BOOL)hasVideo;
+- (NSString *)readVideoTitle;
+- (double)readVideoDuration;
+- (double)readVideoCurrentTime;
+
+- (void)play;
+- (void)pause;
+- (void)resume;
+- (void)stop;
+@end
+
+@interface WKWebView (CRBoost)
+//https://stackoverflow.com/questions/26778955/wkwebview-evaluate-javascript-return-value
+- (NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script;
 
 - (BOOL)hasVideo;
 - (NSString *)readVideoTitle;
