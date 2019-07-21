@@ -348,18 +348,11 @@ CRTabBarHeight(UIViewController *controller)
     if (controller.tabBarController && !controller.tabBarController.tabBar.hidden) {
         height = controller.tabBarController.tabBar.bounds.size.height;
     }
-    if (@available(iOS 11.0, *))
-    {
-        height += CRBottomAdditionalHeight();
-    }
-    else
-    {
-    }
     return height;
 }
 
 CG_INLINE BOOL
-CRPopToViewController(UINavigationController *navigation, __kindof Class controller, BOOL animated)
+CRPopToController(UINavigationController *navigation, __kindof Class controller, BOOL animated)
 {
     __block BOOL found = NO;
     if ([navigation isKindOfClass:[UINavigationController class]]) {
