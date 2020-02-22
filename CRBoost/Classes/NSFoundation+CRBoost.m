@@ -230,11 +230,12 @@ NSString *const kPathFlagSelected = @"Slt";
     return base64;
 }
 
-//- (NSString *)decodeBase64String
-//{
-//    NSData *data = [GTMBase64 decodeString:self];
-//    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//}
+- (NSString *)decodeBase64String
+{
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:self options:0];
+    return [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+}
+
 - (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize
 {
     NSDictionary *attrs = @{ NSFontAttributeName: font };
@@ -1012,7 +1013,7 @@ static char kImageTypeKey;
     UIGraphicsBeginImageContext(image.size);
 
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGRect area = (CGRect) {0, 0, image.size };
+    CGRect area = (CGRect) { 0, 0, image.size };
 
     CGContextScaleCTM(context, 1, -1);
     CGContextTranslateCTM(context, 0, -area.size.height);
@@ -1062,7 +1063,7 @@ static char kImageTypeKey;
     CGContextRef context = CGBitmapContextCreate(rawData, width, height, bitsPercomponent, bytesPerRow, colorSpace,
                                                  kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
     CGColorSpaceRelease(colorSpace);
-    CGContextDrawImage(context, (CGRect) {0, 0, width, height }, imageRef);
+    CGContextDrawImage(context, (CGRect) { 0, 0, width, height }, imageRef);
     CGContextRelease(context);
 
     // change color

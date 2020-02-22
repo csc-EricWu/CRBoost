@@ -47,7 +47,7 @@ extern NSString *const kPathFlagSelected;
 - (BOOL)beginWith:(NSString *)string;
 - (BOOL)endWith:(NSString *)string;
 - (NSString *)base64String;
-//- (NSString *)decodeBase64String;
+- (NSString *)decodeBase64String;
 - (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 - (NSString *)md5String;
 - (NSString *)removeDecimalLastZeros;
