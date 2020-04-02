@@ -810,10 +810,10 @@ CRQueryFromJSON(NSDictionary *json)
 CG_INLINE void
 CRCallPhoneNumber(NSString *phone)
 {
-    NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"tel:%@", phone];
-    UIWebView *callWebview = [[UIWebView alloc] init];
-    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
-    [CRRootView() addSubview:callWebview];
+    NSURL *url = [NSURL URLWithString:CRString(@"tel://%@", phone)];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url options:nil completionHandler:nil];
+    }
 }
 
 CG_INLINE NSString *

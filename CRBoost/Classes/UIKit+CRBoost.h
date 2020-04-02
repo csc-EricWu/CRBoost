@@ -27,19 +27,6 @@
 
 @end
 
-@interface UIWebView (CRBoost)
-
-- (BOOL)hasVideo;
-- (NSString *)readVideoTitle;
-- (double)readVideoDuration;
-- (double)readVideoCurrentTime;
-
-- (void)play;
-- (void)pause;
-- (void)resume;
-- (void)stop;
-@end
-
 @interface WKWebView (CRBoost)
 //https://stackoverflow.com/questions/26778955/wkwebview-evaluate-javascript-return-value
 - (NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script;
