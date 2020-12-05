@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/csc-EricWu/CRBoost'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT' }
   s.author           = { 'Eric Wu' => 'sleman@foxmail.com' }
-  s.source           = { :git => 'https://github.com/csc-EricWu/CRBoost', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/csc-EricWu/CRBoost.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
@@ -37,8 +37,7 @@ TODO: Add long description of the pod here.
   # }
 
   s.public_header_files = 'CRBoost/CRBoost.h'
-
-  s.frameworks = 'UIKit' ,'Foundation'
+#  s.frameworks = 'UIKit' ,'Foundation'
   s.module_name = 'CRBoost'
 
   # s.dependency 'AFNetworking', '~> 2.3'
