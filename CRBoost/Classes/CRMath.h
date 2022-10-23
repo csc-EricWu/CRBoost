@@ -294,15 +294,6 @@ CRScreenRect()
     return CRScreenBounds(CRScreenIsLandscape());
 }
 
-CG_INLINE BOOL
-CRIsIphoneX()
-{
-    return (CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375, 812)) ||//X  or Xs
-            CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(812, 375)) ||//X  or Xs
-            CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(414, 896)) ||//iPhone Xs Max | Xr
-            CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(896, 414)));//iPhone Xs Max | Xr
-}
-
 CG_INLINE UIWindow *
 CRMainWindow(void)
 {
@@ -319,6 +310,24 @@ CRMainWindow(void)
     }
 
     return mainWindow;
+}
+
+CG_INLINE BOOL
+CRIsIphoneX()
+{
+    BOOL result = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return result;
+    }
+    if (@available(iOS 11.0, *)) {
+        CGSize size = [UIScreen mainScreen].bounds.size;
+        NSInteger notchValue = size.width / size.height * 100;
+        UIWindow *mainWindow = CRMainWindow();
+        if (mainWindow.safeAreaInsets.bottom > 0.0 || notchValue == 216 || notchValue == 46) {
+            result = YES;
+        }
+    }
+    return result;
 }
 
 CG_INLINE UIViewController *

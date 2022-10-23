@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077869AE2915402900C4FCEF /* GMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 077869AD2915402900C4FCEF /* GMNetworkManager.m */; };
 		1E694D6FC9C2FE4388F22EF6 /* Pods_CRBoost_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AC8F21AD1E03AF93348D25 /* Pods_CRBoost_Example.framework */; };
+		4DC9363FB0ED58358BC1AE7D /* Pods_CRBoost_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3EB0E8E9B4DAB1C1DDD5D8 /* Pods_CRBoost_Tests.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* CRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* CRAppDelegate.m */; };
@@ -20,7 +22,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		A9021F814772E2F59BD1B4A4 /* Pods_CRBoost_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96EA2EA774DE5C6EFE914F /* Pods_CRBoost_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071359B0290D207200E17099 /* CRBoost_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CRBoost_Example.entitlements; sourceTree = "<group>"; };
+		077869AC2915402900C4FCEF /* GMNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMNetworkManager.h; sourceTree = "<group>"; };
+		077869AD2915402900C4FCEF /* GMNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMNetworkManager.m; sourceTree = "<group>"; };
 		3C4BF4532D67DB5D9C73E467 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CRBoost_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRBoost_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,15 +59,15 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		62AC8F21AD1E03AF93348D25 /* Pods_CRBoost_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoost_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A81A1EC44842A9D6B59ACCC /* Pods-CRBoost_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoost_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRBoost_Tests/Pods-CRBoost_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7137FF2BFD599EE1223A8F26 /* Pods-CRBoost_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoost_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F2098ED9FB6EE66A2DC3FBD /* CRBoost.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CRBoost.podspec; path = ../CRBoost.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AE53D8A1931598D0D30B6A0A /* Pods-CRBoost_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoost_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRBoost_Tests/Pods-CRBoost_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F3EB0E8E9B4DAB1C1DDD5D8 /* Pods_CRBoost_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoost_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB69D1DA7A747745989E3AE /* Pods-CRBoost_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoost_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRBoost_Tests/Pods-CRBoost_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E98E118A19B8AF1B0E099065 /* Pods-CRBoost_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoost_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EF8F918409E1CA175D96CCCF /* Pods-CRBoost_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoost_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRBoost_Tests/Pods-CRBoost_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2E636531FD42A91AD0A2B74 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		FF96EA2EA774DE5C6EFE914F /* Pods_CRBoost_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoost_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				A9021F814772E2F59BD1B4A4 /* Pods_CRBoost_Tests.framework in Frameworks */,
+				4DC9363FB0ED58358BC1AE7D /* Pods_CRBoost_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				071359B0290D207200E17099 /* CRBoost_Example.entitlements */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for CRBoost */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -118,7 +123,7 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				62AC8F21AD1E03AF93348D25 /* Pods_CRBoost_Example.framework */,
-				FF96EA2EA774DE5C6EFE914F /* Pods_CRBoost_Tests.framework */,
+				8F3EB0E8E9B4DAB1C1DDD5D8 /* Pods_CRBoost_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +139,8 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				077869AC2915402900C4FCEF /* GMNetworkManager.h */,
+				077869AD2915402900C4FCEF /* GMNetworkManager.m */,
 			);
 			name = "Example for CRBoost";
 			path = CRBoost;
@@ -184,8 +191,8 @@
 			children = (
 				E98E118A19B8AF1B0E099065 /* Pods-CRBoost_Example.debug.xcconfig */,
 				7137FF2BFD599EE1223A8F26 /* Pods-CRBoost_Example.release.xcconfig */,
-				AE53D8A1931598D0D30B6A0A /* Pods-CRBoost_Tests.debug.xcconfig */,
-				6A81A1EC44842A9D6B59ACCC /* Pods-CRBoost_Tests.release.xcconfig */,
+				EF8F918409E1CA175D96CCCF /* Pods-CRBoost_Tests.debug.xcconfig */,
+				CAB69D1DA7A747745989E3AE /* Pods-CRBoost_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				95243DFC5D3210FFCA437C83 /* [CP] Embed Pods Frameworks */,
+				CD21E082506AD339E43D951E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,7 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "CRBoost_Tests" */;
 			buildPhases = (
-				0CCEA7782D02A035FED33069 /* [CP] Check Pods Manifest.lock */,
+				BA706DFA1DE97294E1F261E5 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
@@ -241,6 +249,9 @@
 				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Eric Wu";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = Y6894WK4GK;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -288,16 +299,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CCEA7782D02A035FED33069 /* [CP] Check Pods Manifest.lock */ = {
+		95243DFC5D3210FFCA437C83 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CRBoost/CRBoost.framework",
+				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRBoost.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA706DFA1DE97294E1F261E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CRBoost_Tests-checkManifestLockResult.txt",
 			);
@@ -306,22 +345,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95243DFC5D3210FFCA437C83 /* [CP] Embed Pods Frameworks */ = {
+		CD21E082506AD339E43D951E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CRBoost/CRBoost.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-resources.sh",
+				"${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRBoost.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRBoost_Example/Pods-CRBoost_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E013E33D3C07881E5E2A09EB /* [CP] Check Pods Manifest.lock */ = {
@@ -351,6 +390,7 @@
 			files = (
 				6003F59E195388D20070C39A /* CRAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CRViewController.m in Sources */,
+				077869AE2915402900C4FCEF /* GMNetworkManager.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,14 +549,19 @@
 			baseConfigurationReference = E98E118A19B8AF1B0E099065 /* Pods-CRBoost_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_ENTITLEMENTS = CRBoost_Example.entitlements;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = S77A4X86XJ;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Y6894WK4GK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CRBoost/CRBoost-Prefix.pch";
 				INFOPLIST_FILE = "CRBoost/CRBoost-Info.plist";
 				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xuesong.app1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksd.ios.MetaGO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "* Development";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "com.ksd.ios.MetaGO Development";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -526,25 +571,26 @@
 			baseConfigurationReference = 7137FF2BFD599EE1223A8F26 /* Pods-CRBoost_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = CRBoost_Example.entitlements;
+				CODE_SIGN_IDENTITY = C3EB1C0795D3C7828BC9D4373F21D850CA78AA62;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QYF3456VAP;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = Y6894WK4GK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CRBoost/CRBoost-Prefix.pch";
 				INFOPLIST_FILE = "CRBoost/CRBoost-Info.plist";
 				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xuesong.app1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksd.ios.MetaGO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "com.xuesong.app1 AppStore";
+				PROVISIONING_PROFILE_SPECIFIER = "com.ksd.ios.MetaGO AdHoc";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE53D8A1931598D0D30B6A0A /* Pods-CRBoost_Tests.debug.xcconfig */;
+			baseConfigurationReference = EF8F918409E1CA175D96CCCF /* Pods-CRBoost_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -568,7 +614,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A81A1EC44842A9D6B59ACCC /* Pods-CRBoost_Tests.release.xcconfig */;
+			baseConfigurationReference = CAB69D1DA7A747745989E3AE /* Pods-CRBoost_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

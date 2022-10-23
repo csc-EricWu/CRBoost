@@ -167,7 +167,8 @@ typedef NSView UIView;
 
 #define CRAppBuild                      [CRBundle infoDictionary][(NSString *)kCFBundleVersionKey]
 #define CRAppVersionShort               [CRBundle infoDictionary][@"CFBundleShortVersionString"]
-#define CRAppName                       [CRBundle infoDictionary][@"CFBundleDisplayName"]
+#define CRAppName                       ([CRBundle infoDictionary][@"CFBundleDisplayName"] ?: [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleNameKey])
+
 
 #define CRIdfa                          [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]
 #define CRIdfv                          [[[UIDevice currentDevice] identifierForVendor] UUIDString]

@@ -1,14 +1,16 @@
 platform :ios, '11.0'
 use_frameworks!
 inhibit_all_warnings!
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'CRBoost_Example' do
   pod 'CRBoost', :path => '../'
-  
-#  pod 'AFNetworking'
-#  pod 'WechatOpenSDK'  #微信官方sdk
-#  pod 'AlipaySDK-iOS'  #支付宝官方sdk
+  pod 'AFNetworking'
+  pod 'WechatOpenSDK'  #微信官方sdk
+  pod 'AlipaySDK-iOS'  #支付宝官方sdk
 #  pod 'ICBCPaySDK' , :path => './Library/ICBCPaySDK'
+  pod "JPush"
+  pod 'FCUUID'
 
   target 'CRBoost_Tests' do
     inherit! :search_paths
